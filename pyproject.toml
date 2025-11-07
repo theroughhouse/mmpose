@@ -10,31 +10,30 @@ readme = "README.md"
 authors = [
     {name = "MMPose Contributors", email = "openmmlab@gmail.com"}
 ]
+license = "Apache License 2.0"
 keywords = ["computer vision", "pose estimation"]
+urls = { "Homepage" = "https://github.com/open-mmlab/mmpose" }
+requires-python = ">=3.13"
 classifiers = [
     "Development Status :: 4 - Beta",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.13"
 ]
-urls = { "Homepage" = "https://github.com/open-mmlab/mmpose" }
-license = {text = "Apache License 2.0"}
-requires-python = ">=3.13"
 dependencies = [
     "chumpy",
     "importlib",
     "json_tricks",
     "matplotlib",
-    "mmcv @ git+https://github.com/dennuguyen/mmcv.git",
-    "mmengine @ git+https://github.com/dennuguyen/mmengine.git",
+    "mmcv @ git+https://github.com/theroughhouse/mmcv.git",
+    "mmengine @ git+https://github.com/theroughhouse/mmengine.git",
     "munkres",
     "numpy",
     "opencv-python",
     "pillow",
     "scipy",
     "torchvision",
-    "xtcocotools @ git+https://github.com/dennuguyen/xtcocoapi.git"
+    "xtcocotools @ git+https://github.com/theroughhouse/xtcocoapi.git"
 ]
 
 [project.optional-dependencies]
@@ -54,7 +53,7 @@ optional = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = [".", "projects/rtmpose3d"]
 exclude = ["configs", "tools", "demo"]
 
 [tool.setuptools.package-data]
